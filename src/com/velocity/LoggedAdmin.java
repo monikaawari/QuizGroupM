@@ -13,8 +13,18 @@ public class LoggedAdmin {
 		JDBC_Connection con=new JDBC_Connection();
 		Connection conn=con.getConnection();
 		
-		System.out.println("************Welcome Admin*************");
-		System.out.println("\nSelect your option\n\n1.Display Result by Student ID\n\n2.Display Result of all students\n\n3.Modify Student Data\n\n4.Delete Record of Student by Id\n\n5.Insert Questions\n\n6.Logout.");
+		System.out.println("*================* Welcome Admin *==========================*");
+		//System.out.println("\nSelect your option\n\n1.Display Result by Student ID\n\n2.Display Result of all students\n\n3.Modify Student Data\n\n4.Delete Record of Student by Id\n\n5.Insert Questions\n\n6.Logout.");
+		System.out.println("||\t*** Select your option                             ||");
+		System.out.println("||\t\t1.Display Result by Student ID             ||");
+		System.out.println("||\t\t2.Display Result of all students           ||");
+		System.out.println("||\t\t3.Modify Student Data                      ||");
+		System.out.println("||\t\t4.Delete Record of Student by Id           ||");
+		System.out.println("||\t\t5.Insert Questions                         ||");
+		System.out.println("||\t\t6.Logout.                                  ||");
+		System.out.println("||=========================================================||");
+		
+		
 		String choice=sc.next();
 		AdminAccessControl ctrl=new AdminAccessControl();
 		switch(choice)

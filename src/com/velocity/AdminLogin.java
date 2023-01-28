@@ -28,9 +28,9 @@ public class AdminLogin {
 	
 	public boolean loginAdmin() throws SQLException{
 		boolean flag=false;
-		System.out.println("Enter your User id");
+		System.out.println("Enter admins User id(Name)");
 		String userId=sc.next();
-		System.out.println("Enter your Password");
+		System.out.println("Enter admins Password");
 		String password=sc.next();
 		PreparedStatement stmt=conn.prepareStatement("select * from registerAdmin where Admin_Name=?");
 		stmt.setString(1, userId);
@@ -60,7 +60,7 @@ public class AdminLogin {
 		}
 		else
 		{
-			System.out.println("\nLogin UnSuccessful....Try again");
+			System.out.println("\nLogin UnSuccessful....Please Try again");
 			System.out.println("\n\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
 		}
@@ -83,7 +83,7 @@ public class AdminLogin {
 
 				admin.registerAdmin();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			System.out.println("\n\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -95,7 +95,7 @@ public class AdminLogin {
 
 				admin.loginAdmin();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			System.out.println("\n\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
@@ -111,7 +111,7 @@ public class AdminLogin {
 				
 				
 			default:
-				System.out.println("Wrong input");
+				System.out.println("Something went wrong.........Entered wrong input");
 				admin.admin();
 				System.out.println("\n\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 				break;

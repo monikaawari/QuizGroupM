@@ -34,7 +34,7 @@ public class FirstPage {
 			System.out.println("\n\n#####################################################################################");
 
 			
-			System.out.println("\n*******************************Thank you for visiting us*******************************\nyou have exited Successfully");
+			System.out.println("\n*******************************Thank you and Keep Learning*******************************");
 			
 			System.exit(0);
 			
@@ -54,7 +54,7 @@ public class FirstPage {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		FirstPage fr = new FirstPage();
 		
 		fr.firstPage();
